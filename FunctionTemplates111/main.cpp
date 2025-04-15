@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+
+#include"PrintT.h"
+
 #define delimiter "\n------------------------------------\n"
 
 const int ROWS = 4;
@@ -11,8 +14,8 @@ void FillRand(double arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
-template<typename T>
-void Print(T arr[], const int n);    //выводит массив на экран
+
+
 template<typename T>
 void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
@@ -153,15 +156,7 @@ void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS)
 
 
 
-template<typename T>
-void Print(T arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
-}
+
 template<typename T>
 void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
