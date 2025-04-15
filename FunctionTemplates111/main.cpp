@@ -1,15 +1,15 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 
-#include"PrintT.h" //Шаблон, ведь, не компилируется, а инстанцируется по фактическому значению параметров!!!!!!!!!!!
+#include"PrintT.h" //РЁР°Р±Р»РѕРЅ, РІРµРґСЊ, РЅРµ РєРѕРјРїРёР»РёСЂСѓРµС‚СЃСЏ, Р° РёРЅСЃС‚Р°РЅС†РёСЂСѓРµС‚СЃСЏ РїРѕ С„Р°РєС‚РёС‡РµСЃРєРѕРјСѓ Р·РЅР°С‡РµРЅРёСЋ РїР°СЂР°РјРµС‚СЂРѕРІ!!!!!!!!!!!
 
 #define delimiter "\n------------------------------------\n"
 
 const int ROWS = 4;
 const int COLS = 10;
 
-void FillRand(int arr[], const int n); //заполнение массива случайными числами
+void FillRand(int arr[], const int n); //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 void FillRand(double arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
@@ -20,17 +20,17 @@ template<typename T>
 void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>
-void Sort(T arr[], const int n);     //сортировка массива
+void Sort(T arr[], const int n);     //СЃРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
 template<typename T>
 void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>
-T Sum(T arr[], const int n);        //сумма массива
+T Sum(T arr[], const int n);        //СЃСѓРјРјР° РјР°СЃСЃРёРІР°
 template<typename T>
 T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>
-double Avg(T arr[], const int n);     //среднеарифметическое
+double Avg(T arr[], const int n);     //СЃСЂРµРґРЅРµР°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ
 template<typename T>
 double Avg(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
@@ -45,7 +45,7 @@ template<typename T>
 T Max(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>
-void  ShiftLeft(T arr[], const int n, const int shifts); // сдвиг влево
+void  ShiftLeft(T arr[], const int n, const int shifts); // СЃРґРІРёРі РІР»РµРІРѕ
 template<typename T>
 void  ShiftRight(T arr[], const int n, const int shifts);
 
@@ -65,10 +65,10 @@ void main()
 	Sort(arr, n);
 	Print(arr, n);
 
-	cout << "Сумма элементов массива: " << Sum(arr, n) << endl;
-	cout << "Среднеарифметическое: " << Avg(arr, n) << endl;
-	cout << "Минимальное значение в массиве: " << Min(arr, n) << endl;
-	cout << "Максимальное значение в массиве: " << Max(arr, n) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(arr, n) << endl;
+	cout << "РЎСЂРµРґРЅРµР°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: " << Avg(arr, n) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << Min(arr, n) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << Max(arr, n) << endl;
 
 
 	const int SIZE = 8;
@@ -79,23 +79,23 @@ void main()
 	Sort(brr, SIZE);
 	Print(brr, SIZE);
 
-	cout << "Сумма элементов массива: " << Sum(brr, SIZE) << endl;
-	cout << "Среднеарифметическое: " << Avg(brr, SIZE) << endl;
-	cout << "Минимальное значение в массиве: " << Min(brr, SIZE) << endl;
-	cout << "Максимальное значение в массиве: " << Max(brr, SIZE) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(brr, SIZE) << endl;
+	cout << "РЎСЂРµРґРЅРµР°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: " << Avg(brr, SIZE) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << Min(brr, SIZE) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ: " << Max(brr, SIZE) << endl;
 	Print(brr, SIZE);
 	int shifts;
-	cout << "Введите количество сдигов: "; cin >> shifts;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРёРіРѕРІ: "; cin >> shifts;
 	ShiftLeft(brr, SIZE, shifts);
 	Print(brr, SIZE);
 
-	cout << "Введите количество сдвигов: "; cin >> shifts;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shifts;
 	ShiftRight(brr, SIZE, shifts);
 
 	cout << delimiter << endl;
 
 
-	int i_arr_2[ROWS][COLS] =              //объявление двумерного массива
+	int i_arr_2[ROWS][COLS] =              //РѕР±СЉСЏРІР»РµРЅРёРµ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°
 	{
 		{3,5,8},
 		{13,21,34},
@@ -105,13 +105,13 @@ void main()
 
 	FillRand(i_arr_2, ROWS, COLS);
 
-	cout << "Сумма двумер массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
-	cout << "Среднеарифметическое: " << Avg(i_arr_2, ROWS, COLS) << endl;
-	cout << "Минимальное значение двумер массива: " << Min(i_arr_2, ROWS, COLS) << endl;
-	cout << "Максимальное значение двумер массива" << Max(i_arr_2, ROWS, COLS) << endl;
+	cout << "РЎСѓРјРјР° РґРІСѓРјРµСЂ РјР°СЃСЃРёРІР°: " << Sum(i_arr_2, ROWS, COLS) << endl;
+	cout << "РЎСЂРµРґРЅРµР°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: " << Avg(i_arr_2, ROWS, COLS) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РґРІСѓРјРµСЂ РјР°СЃСЃРёРІР°: " << Min(i_arr_2, ROWS, COLS) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РґРІСѓРјРµСЂ РјР°СЃСЃРёРІР°" << Max(i_arr_2, ROWS, COLS) << endl;
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
-	cout << "Введите количество сдвигов: "; cin >> shifts;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> shifts;
 	ShiftLeft(i_arr_2, ROWS, COLS, shifts);
 	Print(i_arr_2, ROWS, COLS);
 
@@ -122,7 +122,7 @@ void FillRand(int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand() % 100;            //функция rand()возвращает случайое число в диапазоне от0 до 32767
+		arr[i] = rand() % 100;            //С„СѓРЅРєС†РёСЏ rand()РІРѕР·РІСЂР°С‰Р°РµС‚ СЃР»СѓС‡Р°Р№РѕРµ С‡РёСЃР»Рѕ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚0 РґРѕ 32767
 	}
 }
 void FillRand(double arr[], const int n)
@@ -212,8 +212,8 @@ void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS)
 				}
 			}
 		}
-	cout << "Колич итераций" << iter << endl;
-	cout << "Колич обменов" << exch << endl;
+	cout << "РљРѕР»РёС‡ РёС‚РµСЂР°С†РёР№" << iter << endl;
+	cout << "РљРѕР»РёС‡ РѕР±РјРµРЅРѕРІ" << exch << endl;
 }
 
 
@@ -328,7 +328,7 @@ void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int shifts)
 	//{
 		//ShiftLeft(arr[i], COLS, shifts);
 	//}
-	ShiftLeft(arr[0], ROWS * COLS, shifts); //Сквозной сдвиг
+	ShiftLeft(arr[0], ROWS * COLS, shifts); //РЎРєРІРѕР·РЅРѕР№ СЃРґРІРёРі
 }
 
 
